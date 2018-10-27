@@ -2,8 +2,7 @@ const moment = require('moment');
 const exportfile = require('./index');
 
 const options = {
-    title: "นครินทร์ วีระศักดิ์",
-    
+    title: "นครินทร์ วีระศักดิ์"
 };
 
 exportfile.createFileImage(options).then((res) => {

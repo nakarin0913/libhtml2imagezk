@@ -1,17 +1,10 @@
-@font-face {
-    font-family: "helvethaicaais";
-    font-style: normal;
-    src: url('../fonts/db_helvethaicaais_x_v3.2-webfont.woff') format('woff');
-}
-
-[class$="-primary"] {
-    color: #74a122;
-}
+@import url('https://fonts.googleapis.com/css?family=Mitr');
 
 html, body {
     margin-top: 12px;
     font-family: 'helvethaicaais';
     font-size: 15px;
+    font-family: 'Mitr', sans-serif;
 }
 
 hr {
