@@ -39,11 +39,7 @@ module.exports = {
 
     const basePath = path.join(__dirname, 'templates');
     const eAppOptions = {
-      templatePath: path.join(basePath, 'template.html'),
-      filePath: path.join(
-        options.imgDir || './out',
-        options.imgName || 'filePort.pdf'
-      )
+      templatePath: path.join(basePath, 'template.html')
     };
     
     console.log(entity);  

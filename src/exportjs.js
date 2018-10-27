@@ -72,6 +72,18 @@ module.exports = function (options) {
             width:794, height: 1123
         }
     };
+
+    let htmlOptionsBase64 = {
+        type: "jpeg", // allowed file types: png, jpeg, pdf
+        quality: "100", // images
+        format: "A4",        // allowed units: A3, A4, A5, Legal, Letter, Tabloid
+        orientation: "portrait", // portrait or landscape
+        //zoomFactor: 1, //default
+        viewportSize: {
+            //width: 874, height: 1240
+            width:794, height: 1123
+        }
+    };
     
     return {
         create: function (entity) {
