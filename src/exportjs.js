@@ -12,7 +12,6 @@ function render(templatePath, entity) {
         entity
     );
     const $ = cheerio.load(html);
-    createFontAIS($, basePath);
     createTagBase($, basePath);
     
     return $.html();
