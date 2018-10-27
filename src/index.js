@@ -22,7 +22,7 @@ module.exports = {
       templatePath: path.join(basePath, 'template.html'),
       filePath: path.join(
         options.imgDir || './out',
-        options.imgName || 'filePort.jpg'
+        options.imgName || 'filePort.pdf'
       )
     };
     

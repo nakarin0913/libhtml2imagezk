@@ -1,27 +1,19 @@
 const ejs = require('ejs');
 const html2pdf = require('html-pdf');
 const fs = require('fs');
-const cheerio = require('cheerio');
 const path = require('path');
 
 function render(templatePath, entity) {
-    const basePath = path.dirname(templatePath);
     
-    const html = ejs.render(
+    var html = ejs.render(
         fs.readFileSync(templatePath, 'utf8'),
         entity
     );
-    const $ = cheerio.load(html);
-    createTagBase($, basePath);
-    
-    return $.html();
+
+    return html;
 }
 
-function createTagBase($, basePath) {
-    $('head').prepend(
-        $('<base/>').attr('href', 'file:///' + rewriteBaseUrl(basePath)).attr("target", "_blank")
-    );
-}
+
 
 function rewriteBaseUrl(baseUrl) {
     return path.join(baseUrl, '/').replace(new RegExp(/\\/g),'/');
@@ -70,9 +62,9 @@ function createBase64(html, htmlOptions) {
 module.exports = function (options) {
     
     let htmlOptions = {
-        type: "jpeg", // allowed file types: png, jpeg, pdf
+        type: "pdf", // allowed file types: png, jpeg, pdf
         quality: "100", // images
-        format: "Letter",        // allowed units: A3, A4, A5, Legal, Letter, Tabloid
+        format: "A4",        // allowed units: A3, A4, A5, Legal, Letter, Tabloid
         orientation: "portrait", // portrait or landscape
         //zoomFactor: 1, //default
         viewportSize: {
