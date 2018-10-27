@@ -1,0 +1,39 @@
+@font-face {
+    font-family: "helvethaicaais";
+    font-style: normal;
+    src: url('../fonts/db_helvethaicaais_x_v3.2-webfont.woff') format('woff');
+}
+
+[class$="-primary"] {
+    color: #74a122;
+}
+
+html, body {
+    margin-top: 12px;
+    font-family: 'helvethaicaais';
+    font-size: 15px;
+}
+
+hr {
+    border-top: 1px solid #ccc;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.campaig-header {
+    margin-bottom: 30px;
+}
+
+.text-indent {
+    text-indent: 25px;
+}
+
+.signature {
+    width: 150px;
+    margin-right: 65px;
+    margin-bottom: -15px;
+}
+
+.signature > img {
+    width: 100%;
+}
