@@ -4,76 +4,40 @@ Compile : EJS [Effective JavaScript templating.]
 -->
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Zack Portforio</title>
+        <!-- Bootstrap -->
+        <link href="assets/css/bootstrap.css" rel="stylesheet">        
+        <link href="assets/css/style.css" rel="stylesheet">      
+        <style>
+            .billing {                                              
+                margin: 20px;
+                text-align: center;
+            }
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Zack Portforio</title>
-    <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Mitr:300" rel="stylesheet">
-    <style>
-        html,
-        body {
-            margin-top: 12px;
-            font-family: 'helvethaicaais';
-            font-size: 15px;
-            font-family: 'Mitr', sans-serif;
-        }
-
-        hr {
-            border-top: 1px solid #ccc;
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-
-        .campaig-header {
-            margin-bottom: 30px;
-        }
-
-        .text-indent {
-            text-indent: 25px;
-        }
-
-        .signature {
-            width: 150px;
-            margin-right: 65px;
-            margin-bottom: -15px;
-        }
-
-        .signature>img {
-            width: 100%;
-        }
-
-        .billing {
-            margin: 20px;
-            text-align: center;
-        }
-
-        .billing>.total {
-            border-top: 1px solid #ccc;
-            border-bottom: 1px solid #ccc;
-            padding: 20px;
-            width: 50%;
-            margin: 0 auto;
-        }
-    </style>
-</head>
-
-<body>
-    <div class="container">
-        <div class="">
-            <div>
-                <!-- <img src="assets/images/awn_logo.png" class="pull-right" style="width: 140px; margin-bottom: 20px;" /> -->
-                <div class="clearfix"></div>
-            </div>
-            <div class="text-justify">
-                <h4>ทดสอบชอบทดลอง </h4>
+            .billing > .total {
+                border-top: 1px solid #ccc;
+                border-bottom: 1px solid #ccc;
+                padding: 20px;
+                width: 50%; 
+                margin: 0 auto; 
+            }
+        </style>  
+    </head>
+    <body>
+        <div class="container">
+            <div class="">
+                <div>
+                    <!-- <img src="assets/images/awn_logo.png" class="pull-right" style="width: 140px; margin-bottom: 20px;" /> -->
+                    <div class="clearfix"></div>
+                </div>
+                <div class="text-justify">
+                    <h4> <%= title %> </h4>
+                </div>
             </div>
         </div>
-    </div>
-</body>
-
+    </body>
 </html>
