@@ -6,9 +6,9 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "ejs": "^2.5.7",
-    "html-pdf": "^2.2.0",
-    "moment": "^2.22.2",
-    "phantomjs-prebuilt": "2.1.16"
+    "html-pdf": "^2.1.0",
+    "moment": "^2.18.1",
+    "phantomjs-prebuilt": "2.1.14"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
