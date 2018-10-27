@@ -29,6 +29,26 @@ module.exports = {
     console.log(entity);  
       
     return Exportjs(eAppOptions).create(entity);
+  },
+
+  createFileImageBase64: function (options) {
+      
+    const entity = {
+      title: defaultIfEmpty(options.title, '-')
+    };
+
+    const basePath = path.join(__dirname, 'templates');
+    const eAppOptions = {
+      templatePath: path.join(basePath, 'template.html'),
+      filePath: path.join(
+        options.imgDir || './out',
+        options.imgName || 'filePort.pdf'
+      )
+    };
+    
+    console.log(entity);  
+      
+    return Exportjs(eAppOptions).createBase64(entity);
   }
 };
 
