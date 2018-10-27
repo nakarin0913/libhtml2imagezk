@@ -1,7 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const pdf = require('html-pdf');
-const cheerio = require('cheerio');
 const Exportjs = require('./exportjs');
 
 function defaultIfEmpty(message, messageDefault) {

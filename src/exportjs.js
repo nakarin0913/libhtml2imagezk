@@ -23,21 +23,6 @@ function createTagBase($, basePath) {
     );
 }
 
-function createFontAIS($, basePath) {
-    const woff = path.join(basePath, 'assets/fonts/db_helvethaicaais_x_v3.2-webfont.woff');
-    let style = `
-    <style>
-    @font-face {
-        font-family: helvethaicaais;
-        font-style: normal;
-        src: url(`+woff+`) format('woff');
-    }
-    </style>
-    `;
-    // Add style element into Head
-    $('head').prepend(style);
-}
-
 function rewriteBaseUrl(baseUrl) {
     return path.join(baseUrl, '/').replace(new RegExp(/\\/g),'/');
 }
@@ -85,8 +70,6 @@ function createBase64(html, htmlOptions) {
 module.exports = function (options) {
     
     let htmlOptions = {
-        phantomPath: 'node',
-        phantomArgs: ['./node_modules/phantomjs-prebuilt/bin/phantomjs'],
         type: "jpeg", // allowed file types: png, jpeg, pdf
         quality: "100", // images
         format: "Letter",        // allowed units: A3, A4, A5, Legal, Letter, Tabloid
